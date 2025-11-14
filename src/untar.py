@@ -6,8 +6,7 @@ import tarfile
 def untar_c(a):
     try:
         with tarfile.open(a, "r:gz") as tar:
-            # открывает архив для чтения 
-            # 1- имя архива,2- режим чтения gzip-сжатого tar-архива
+            # gzip-сжатый tar-архива
             tar.extractall('.')
             # извлекает все файлы из архива в текущую директорию 
         lg(f"untar {a}")
