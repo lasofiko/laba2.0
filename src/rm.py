@@ -4,8 +4,10 @@ import os
 
 def rm_c(p):
     try:
-        abs_path = os.path.abspath(p)
+        abs_path = os.path.abspath(p) 
+        # полный путь к файлу или папрке в р
         if abs_path == '/' or abs_path == os.path.abspath('..'):
+            # проверяем он корневой или родительский 
             print('Ошибка: Запрещено удалять корневой или родительский каталог')
             lg(f'rm {p}', False)
             return
