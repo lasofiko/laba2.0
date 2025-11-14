@@ -5,7 +5,7 @@ def cat_c(p):
 
     try:
         # проверка что путь ведет к файлу, а не к папке
-        if os.path.isdir(p):
+        if os.path.isdir(p): #os.path.isdir(p) - проверяет, является ли путь директорией
             print(f"Ошибка: '{p}' является каталогом")
             lg(f'cat {p}', False)
             return
@@ -18,3 +18,4 @@ def cat_c(p):
     except:
         print(f"Ошибка: Не удалось прочитать файл '{p}'")
         lg(f'cat {p}', False)
+
