@@ -7,10 +7,6 @@ from cat import cat_c
 from cp import cp_c
 from rm import rm_c
 from mv import mv_c
-from zip import zip_c
-from unzip import unzip_c
-from tar import tar_c
-from untar import untar_c
 
 def main():
     while 1:
@@ -56,16 +52,9 @@ def main():
                         print('Ошибка, не указан источник и назначения')
                 case 'exit':
                     print('Пока')
-                case 'zip':
-                    zip_c(s[1])
-                case 'unzip':
-                    unzip_c(s[1])
-                case 'tar':
-                    tar_c(s[1])
-                case 'untar':
-                    untar_c(s[1])
                 case _:
-                    print(f'Неизвестная команда: {x}')    
+                    print(f'Неизвестная команда: {x}')
 
 if __name__=='__main__':
     main()
+
